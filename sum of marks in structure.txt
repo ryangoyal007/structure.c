@@ -1,0 +1,26 @@
+#include<stdio.h>
+struct student
+{
+    char name[10];
+    int rollno;
+    int subject[5],total;
+};
+main ( )
+{
+ struct student s[100];
+    int n,i,j;
+    printf("Enter the number of Students: ");
+    scanf("%d",&n);
+    printf("Enter the Marks of Five Subjects: ");
+    for(i=0; i<n; i++)
+    {
+        printf("\nEnter student[%d] student marks",i);
+        s[i].total=0;
+        for(j=0; j<5; j++)
+        {
+            scanf("%d",&s[i].subject[j]);
+            s[i].total=s[i].total+s[i].subject[j];
+        }
+        printf("%d\n",s[i].total);
+    }
+}
